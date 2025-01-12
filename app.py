@@ -13,7 +13,7 @@ def home():
     if request.method == 'POST':
         try:
             # Collect inputs from the form
-            features = [float(request.form[f'i{i}']) for i in range(1, 12)]
+            features = [eval(request.form[f'i{i}']) for i in range(1, 12)]
             prediction = model.predict([features])[0]  # Predict using the model
             
             # Storytelling explanation
