@@ -1,0 +1,76 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Predictor</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f2a365, #ff7eb3);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wine Quality Predictor</h1>
+        <form action="/" method="post">
+            <label for="i1">Fixed Acidity:</label>
+            <input type="number" id="i1" name="i1" required>
+            <label for="i2">Volatile Acidity:</label>
+            <input type="number" id="i2" name="i2" required>
+            <label for="i3">Citric Acid:</label>
+            <input type="number" id="i3" name="i3" required>
+            <label for="i4">Residual Sugar:</label>
+            <input type="number" id="i4" name="i4" required>
+            <label for="i5">Chlorides:</label>
+            <input type="number" id="i5" name="i5" required>
+            <label for="i6">Free Sulfur Dioxide:</label>
+            <input type="number" id="i6" name="i6" required>
+            <label for="i7">Total Sulfur Dioxide:</label>
+            <input type="number" id="i7" name="i7" required>
+            <label for="i8">Density:</label>
+            <input type="number" id="i8" name="i8" required>
+            <label for="i9">pH:</label>
+            <input type="number" id="i9" name="i9" required>
+            <label for="i10">Sulphates:</label>
+            <input type="number" id="i10" name="i10" required>
+            <label for="i11">Alcohol:</label>
+            <input type="number" id="i11" name="i11" required>
+            <input type="submit" value="Get Prediction">
+        </form>
+    </div>
+</body>
+</html>
