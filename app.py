@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 import pickle  # Assume your model is saved as a pickle file
 import numpy as np
+import os
 
 app = Flask(__name__)
 
@@ -18,7 +19,7 @@ def home():
             
             # Storytelling explanation
             if prediction < 4:
-                result_message = "The predicted wine quality is very low. This wine is likely not suitable for most people’s tastes."
+                 result_message = "The predicted wine quality is very low. This wine is likely not suitable for most people’s tastes."
             elif 4 <= prediction < 6:
                 result_message = "The predicted wine quality is average. It might be acceptable, but it’s not likely to impress anyone."
             elif 6 <= prediction < 8:
@@ -34,5 +35,5 @@ def home():
     return render_template('regression.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
