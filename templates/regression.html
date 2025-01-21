@@ -32,13 +32,15 @@
             flex-direction: column;
             gap: 15px;
         }
+        select, input[type="submit"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
         input[type="submit"] {
             background-color: #28a745;
             color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
             cursor: pointer;
         }
     </style>
@@ -48,27 +50,104 @@
         <h1>Wine Quality Predictor</h1>
         <form action="/" method="post">
             <label for="i1">Fixed Acidity:</label>
-            <input type="number" id="i1" name="i1" required>
+            <select id="i1" name="i1" required>
+                <option value="7.4">7.4</option>
+                <option value="7.5">7.5</option>
+                <option value="7.6">7.6</option>
+                <option value="7.8">7.8</option>
+                <option value="8.0">8.0</option>
+            </select>
+
             <label for="i2">Volatile Acidity:</label>
-            <input type="number" id="i2" name="i2" required>
+            <select id="i2" name="i2" required>
+                <option value="0.70">0.70</option>
+                <option value="0.72">0.72</option>
+                <option value="0.74">0.74</option>
+                <option value="0.76">0.76</option>
+                <option value="0.78">0.78</option>
+            </select>
+
             <label for="i3">Citric Acid:</label>
-            <input type="number" id="i3" name="i3" required>
+            <select id="i3" name="i3" required>
+                <option value="0.00">0.00</option>
+                <option value="0.01">0.01</option>
+                <option value="0.02">0.02</option>
+                <option value="0.03">0.03</option>
+                <option value="0.04">0.04</option>
+            </select>
+
             <label for="i4">Residual Sugar:</label>
-            <input type="number" id="i4" name="i4" required>
+            <select id="i4" name="i4" required>
+                <option value="1.9">1.9</option>
+                <option value="2.0">2.0</option>
+                <option value="2.1">2.1</option>
+                <option value="2.2">2.2</option>
+                <option value="2.5">2.5</option>
+            </select>
+
             <label for="i5">Chlorides:</label>
-            <input type="number" id="i5" name="i5" required>
+            <select id="i5" name="i5" required>
+                <option value="0.076">0.076</option>
+                <option value="0.078">0.078</option>
+                <option value="0.080">0.080</option>
+                <option value="0.082">0.082</option>
+                <option value="0.084">0.084</option>
+            </select>
+
             <label for="i6">Free Sulfur Dioxide:</label>
-            <input type="number" id="i6" name="i6" required>
+            <select id="i6" name="i6" required>
+                <option value="11.0">11.0</option>
+                <option value="12.0">12.0</option>
+                <option value="13.0">13.0</option>
+                <option value="14.0">14.0</option>
+                <option value="15.0">15.0</option>
+            </select>
+
             <label for="i7">Total Sulfur Dioxide:</label>
-            <input type="number" id="i7" name="i7" required>
+            <select id="i7" name="i7" required>
+                <option value="34.0">34.0</option>
+                <option value="35.0">35.0</option>
+                <option value="36.0">36.0</option>
+                <option value="37.0">37.0</option>
+                <option value="40.0">40.0</option>
+            </select>
+
             <label for="i8">Density:</label>
-            <input type="number" id="i8" name="i8" required>
+            <select id="i8" name="i8" required>
+                <option value="0.9978">0.9978</option>
+                <option value="0.9980">0.9980</option>
+                <option value="0.9982">0.9982</option>
+                <option value="0.9984">0.9984</option>
+                <option value="0.9986">0.9986</option>
+            </select>
+
             <label for="i9">pH:</label>
-            <input type="number" id="i9" name="i9" required>
+            <select id="i9" name="i9" required>
+                <option value="3.51">3.51</option>
+                <option value="3.52">3.52</option>
+                <option value="3.53">3.53</option>
+                <option value="3.54">3.54</option>
+                <option value="3.55">3.55</option>
+            </select>
+
             <label for="i10">Sulphates:</label>
-            <input type="number" id="i10" name="i10" required>
+            <select id="i10" name="i10" required>
+                <option value="0.56">0.56</option>
+                <option value="0.58">0.58</option>
+                <option value="0.60">0.60</option>
+                <option value="0.62">0.62</option>
+                <option value="0.64">0.64</option>
+            </select>
+
             <label for="i11">Alcohol:</label>
-            <input type="number" id="i11" name="i11" required>
+            <select id="i11" name="i11" required>
+                <option value="9.4">9.4</option>
+                <option value="9.5">9.5</option>
+                <option value="9.6">9.6</option>
+                <option value="9.7">9.7</option>
+                <option value="9.8">9.8</option>
+            </select>
+
             <input type="submit" value="Get Prediction">
         </form>
     </div>
